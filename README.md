@@ -1,5 +1,7 @@
 # American Option Pricing: Binomial Trees & Longstaff-Schwartz Monte Carlo
 
+**🔗 [Live Demo](https://tree-pricer-909492874362.us-central1.run.app)** · interactive pricer with adjustable parameters, convergence chart, and LSM cross-validation.
+
 Two complementary numerical methods for pricing American options, where Black-Scholes has no closed-form solution. Implements a Cox-Ross-Rubinstein binomial tree and Longstaff-Schwartz least-squares Monte Carlo, validates them against each other, extracts the early-exercise boundary, computes finite-difference Greeks, and extends to multi-asset basket options to demonstrate the curse of dimensionality.
 
 Fifth project in a quantitative finance portfolio. Strengthens the derivatives-pricing track alongside the Black-Scholes and Monte Carlo pricers.
