@@ -9,10 +9,5 @@ COPY . .
 
 EXPOSE 8080
 
-# Streamlit must bind to Cloud Run's $PORT and run headless
-CMD streamlit run streamlit_app.py \
-    --server.port=8080 \
-    --server.address=0.0.0.0 \
-    --server.headless=true \
-    --server.enableCORS=false \
-    --server.enableXsrfProtection=false
+# Single-line CMD — uses ${PORT} that Cloud Run injects (defaults to 8080)
+CMD streamlit run streamlit_app.py --server.port=${PORT:-8080} --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false --browser.gatherUsageStats=false
